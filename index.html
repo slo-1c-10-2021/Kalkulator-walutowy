@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walutowy</title>
+    <script>
+        function przelicz() {
+            var zloty = parseFloat(document.getElementById("zloty").value);
+            var kurs = parseFloat(document.getElementById("dolar").value);
+            document.getElementById("wynik").innerHTML= zloty / kurs;
+        }
+    </script>
+    <style>
+        body { 
+            background-color: red;
+            text-align: center;
+            font-family: verdana;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        hr {
+            color: darkblue;
+            height: 10px;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalkulator walutowy</h1>
+    <hr>
+    <label for="dolar">Podaj aktalny kurs dolara</label>
+    <input type="text" id="dolar" name="dolar" value="0" dir="rtl">
+    <hr>
+    </br>
+    <label for="zloty">Podaj ile zlotówek chcesz zamienić na dolary</label>
+    <input type="text" id="zloty" name="zloty" value="0" dir="rtl">
+    <hr>
+    <div id="wynik">TU UKAŻE SIE WYNIK</div> 
+    <button onclick="przelicz()">Przelicz</button>
+
+</body>
+</html>
